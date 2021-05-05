@@ -45,8 +45,8 @@ export default class MainScene extends Phaser.Scene {
     if (Object.getOwnPropertyNames(this.passingData).length === 0
       && this.passingData.constructor === Object) {
       this.passingData = {
-        maxLives: 3,
-        lives: 3,
+        maxLives: 2,
+        lives: 2,
         score: 0,
       };
     }
@@ -68,7 +68,7 @@ export default class MainScene extends Phaser.Scene {
     this.anims.create({
       key: 'sprExplosion',
       frames: this.anims.generateFrameNumbers('sprExplosion'),
-      frameRate: 15,
+      frameRate: 18,
       repeat: 0,
     });
 
@@ -95,16 +95,14 @@ export default class MainScene extends Phaser.Scene {
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
-    this.playerShootDelay = 20;
+    this.playerShootDelay = 22;
     this.playerShootTick = 0;
 
     this.shieldPattern = [
-      [0, 1, 1, 1, 1, 1, 0],
-      [1, 1, 1, 1, 1, 1, 1],
-      [1, 1, 1, 1, 1, 1, 1],
-      [1, 1, 0, 0, 0, 1, 1],
-      [1, 1, 0, 0, 0, 1, 1],
-      [1, 1, 0, 0, 0, 1, 1],
+      [0, 0, 0, 1, 1, 0, 0, 0],
+      [0, 0, 1, 1, 1, 1, 0, 0],
+      [0, 1, 1, 1, 1, 1, 1, 0]
+  
     ];
 
     this.enemies = this.add.group();
@@ -202,7 +200,7 @@ export default class MainScene extends Phaser.Scene {
     }, null, this);
 
     const totalShieldsWidth = (4 * 96) + (7 * 8);
-    for (let i = 0; i < 4; i += 1) {
+    for (let i = 0; i < 3; i += 1) {
       this.addShield(
         ((this.game.config.width * 0.5) - (totalShieldsWidth * 0.5)) + ((i * 96) + (7 * 8)),
         this.game.config.height - 128,
@@ -292,15 +290,16 @@ export default class MainScene extends Phaser.Scene {
   }
 
   updatePlayerMovement() {
+    this.keys = this.input.keyboard.addKeys('LEFT,RIGHT,UP,DOWN,Z,X');
     this.time.addEvent({
       delay: 60,
       callback() {
-        if (this.keyA.isDown) {
-          this.player.x -= 8;
+        if (this.keys.RIGHT.isDown) {
+          this.player.x += 8;
         }
 
-        if (this.keyD.isDown) {
-          this.player.x += 8;
+        if (this.keys.LEFT.isDown) {
+          this.player.x -= 8;
         }
       },
       callbackScope: this,
