@@ -2,7 +2,7 @@ import Phaser from '../phaser';
 import playBtn from '../../assets/images/playbtnn.jpeg';
 import leadBtn from '../../assets/images/leaderr.png';
 import sound from '../../assets/audio/sndBtn.wav';
-import Background from '../../assets/images/back.png';
+import Background from '../../assets/images/backk.jpg';
 
 export default class StartScreen extends Phaser.Scene {
   constructor() {
@@ -22,7 +22,7 @@ export default class StartScreen extends Phaser.Scene {
       btn: this.sound.add('sndBtn'),
     };
 
-    this.add.image(560, 500, 'bgStart');
+    this.add.image(400, 300, 'bgStart');
 
     this.textTitle = this.add.text(
       this.game.config.width * 0.5,

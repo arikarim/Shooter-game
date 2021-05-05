@@ -10,7 +10,7 @@ import Score from './scenes/score';
 const config = {
   type: Phaser.WEBGL,
   width: 600,
-  height: 550,
+  height: 650,
   backgroundColor: 'black',
   physics: {
     default: 'arcade',

@@ -1,6 +1,6 @@
 import Phaser from '../phaser';
 import { getGameScores } from '../helpers/scoreLogic';
-import Background from '../../assets/images/baseBg.png';
+import Background from '../../assets/images/back.png';
 import buttonUp from '../../assets/images/buttonUp.png';
 import backBtn from '../../assets/images/return.png';
 

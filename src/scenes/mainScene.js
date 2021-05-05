@@ -11,6 +11,7 @@ import laserSnd2 from '../../assets/audio/sndLaserEnemy.wav';
 import { Player, PlayerLaser } from '../content/player';
 import { Enemy, EnemyLaser } from '../content/enemy';
 import { ShieldTile, Explosion } from '../content/entity';
+import Background from '../../assets/images/backk.jpg';
 
 
 export default class MainScene extends Phaser.Scene {
@@ -23,7 +24,9 @@ export default class MainScene extends Phaser.Scene {
   }
 
   preload() {
+    this.load.image('bgStart', Background);
     this.load.image('sprPlayer', player);
+    
     this.load.spritesheet('sprEnemy0', enemies, {
       frameWidth: 8,
       frameHeight: 8,
@@ -49,8 +52,10 @@ export default class MainScene extends Phaser.Scene {
         lives: 2,
         score: 0,
       };
+      
     }
-
+    this.add.image(400, 300, 'bgStart');
+    
  // Resize the image
 
     this.sfx = {
@@ -108,6 +113,7 @@ export default class MainScene extends Phaser.Scene {
       [0, 1, 1, 1, 1, 1, 1, 0]
   
     ];
+    
 
     this.enemies = this.add.group();
     this.enemyLasers = this.add.group();
@@ -210,6 +216,7 @@ export default class MainScene extends Phaser.Scene {
         this.game.config.height - 128,
       );
     }
+    
   }
 
 
@@ -472,5 +479,7 @@ export default class MainScene extends Phaser.Scene {
       callbackScope: this,
       loop: false,
     });
+    
   }
+  
 }
