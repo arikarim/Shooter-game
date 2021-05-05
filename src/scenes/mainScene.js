@@ -51,6 +51,8 @@ export default class MainScene extends Phaser.Scene {
       };
     }
 
+ // Resize the image
+
     this.sfx = {
       explode: this.sound.add('sndExplode'),
       laserPlayer: this.sound.add('sndLaserPlayer'),
@@ -58,12 +60,12 @@ export default class MainScene extends Phaser.Scene {
     };
 
 
-    this.anims.create({
-      key: 'sprEnemy0',
-      frames: this.anims.generateFrameNumbers('sprEnemy0'),
-      frameRate: 10,
-      repeat: -1,
-    });
+    // this.anims.create({
+    //   key: 'sprEnemy0',
+    //   frames: this.anims.generateFrameNumbers('sprEnemy0'),
+    //   frameRate: 10,
+    //   repeat: -1,
+    // });
 
     this.anims.create({
       key: 'sprExplosion',
@@ -85,9 +87,11 @@ export default class MainScene extends Phaser.Scene {
     );
 
     this.player = new Player(
+      
       this,
       this.game.config.width * 0.5,
       this.game.config.height - 54,
+      this.scale = 0.5,
     );
     this.player.body.collideWorldBounds = true;
 
