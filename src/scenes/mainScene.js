@@ -465,6 +465,7 @@ export default class MainScene extends Phaser.Scene {
       this.passingData.lives = 3;
     }
 
+    
     this.time.addEvent({
       delay: 3000,
       callback() {
