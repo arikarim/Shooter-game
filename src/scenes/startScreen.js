@@ -1,8 +1,8 @@
 import Phaser from '../phaser';
-import playBtn from '../../assets/images/playButton.png';
-import leadBtn from '../../assets/images/leadersBoardButton.png';
+import playBtn from '../../assets/images/playbtnn.jpeg';
+import leadBtn from '../../assets/images/leaderr.png';
 import sound from '../../assets/audio/sndBtn.wav';
-import Background from '../../assets/images/baseBg.png';
+import Background from '../../assets/images/back.png';
 
 export default class StartScreen extends Phaser.Scene {
   constructor() {
@@ -22,12 +22,12 @@ export default class StartScreen extends Phaser.Scene {
       btn: this.sound.add('sndBtn'),
     };
 
-    this.add.image(260, 400, 'bgStart');
+    this.add.image(560, 500, 'bgStart');
 
     this.textTitle = this.add.text(
       this.game.config.width * 0.5,
       64,
-      "KILL'EM ALL",
+      "Galaxy War",
       {
         fontFamily: 'monospace',
         fontSize: 32,
@@ -37,8 +37,8 @@ export default class StartScreen extends Phaser.Scene {
     this.textTitle.setOrigin(0.5);
 
     this.btnPlay = this.add.sprite(
-      this.game.config.width * 0.5,
-      this.game.config.height * 0.5,
+      this.game.config.width * 0.2,
+      this.game.config.height * 0.3,
       'sprBtnPlay',
     );
     this.btnPlay.setInteractive();
@@ -54,7 +54,7 @@ export default class StartScreen extends Phaser.Scene {
 
 
     this.leaderBoard = this.add.sprite(
-      this.game.config.width * 0.5,
+      this.game.config.width * 0.7,
       this.game.config.height * 0.6,
       'ldBtn',
     );
@@ -71,7 +71,7 @@ export default class StartScreen extends Phaser.Scene {
     }, this);
 
     const style = {
-      fontFamily: 'monospace',
+      fontFamily: 'san-serif',
       fontSize: 16,
       color: '#aaf',
       align: 'center',
