@@ -446,7 +446,7 @@ export default class MainScene extends Phaser.Scene {
   createLivesIcons() {
     for (let i = 0; i < this.passingData.lives; i += 1) {
       const icon = this.add.sprite(
-        32 + (i * 32),
+        32 + (i * 492),
         this.game.config.height - 24,
         'sprPlayer',
       );
