@@ -1,6 +1,6 @@
 import Phaser from '../phaser';
 import player from '../../assets/images/sprPlayer.png';
-import enemies from '../../assets/images/sprEnemy0.png';
+import enemies from '../../assets/images/enee.png';
 import shield from '../../assets/images/sprShieldTile.png';
 import enemyLaser from '../../assets/images/sprLaserEnemy.png';
 import playerLaser from '../../assets/images/sprLaserPlayer.png';
@@ -91,8 +91,8 @@ export default class MainScene extends Phaser.Scene {
     );
     this.player.body.collideWorldBounds = true;
 
-    this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-    this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+    // this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+    // this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
     this.playerShootDelay = 22;
@@ -121,7 +121,7 @@ export default class MainScene extends Phaser.Scene {
       Math.round((this.game.config.height / 20) * 0.25) * 20,
     );
 
-    for (let x = 0; x < Math.round((this.game.config.width / 24) * 0.75); x += 1) {
+    for (let x = 0; x < Math.round((this.game.config.width / 25) * 0.75); x += 1) {
       for (let y = 0; y < Math.round((this.game.config.height / 20) * 0.25); y += 1) {
         const enemy = new Enemy(this, x * 24, 128 + (y * 20), 'sprEnemy0');
         enemy.play('sprEnemy0');
