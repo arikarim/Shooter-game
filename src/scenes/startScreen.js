@@ -76,7 +76,7 @@ export default class StartScreen extends Phaser.Scene {
       color: '#aaf',
       align: 'center',
     };
-    const instruction1 = 'Use A and D to move your plane left or right.';
+    const instruction1 = 'Use Arrow keys to move around.';
     const instruction2 = 'Use Space Bar to shoot.';
     const xPos = this.game.config.width * 0.5;
     const yPos = this.game.config.height - 40;

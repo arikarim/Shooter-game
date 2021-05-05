@@ -301,6 +301,14 @@ export default class MainScene extends Phaser.Scene {
         if (this.keys.LEFT.isDown) {
           this.player.x -= 8;
         }
+
+        if (this.keys.UP.isDown) {
+          this.player.y -= 8;
+        }
+
+        if (this.keys.DOWN.isDown) {
+          this.player.y += 8;
+        }
       },
       callbackScope: this,
       loop: true,

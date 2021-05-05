@@ -1,7 +1,7 @@
 import Phaser from '../phaser';
 import * as Helper from '../helpers/buttonHelpers';
 import * as ScoreLogic from '../helpers/scoreLogic';
-import Background from '../../assets/images/baseBg.png';
+import Background from '../../assets/images/back.png';
 import buttonUp from '../../assets/images/buttonUp.png';
 
 export default class GameOver extends Phaser.Scene {
@@ -24,6 +24,8 @@ export default class GameOver extends Phaser.Scene {
     this.add.image(260, 400, 'GOendBG');
 
     this.addText(200, 'GAME OVER', 45);
+
+    this.addText(100, 'Better luck next time', 45);
 
     this.addText(300, `Your score: ${this.gameScore}`, 25);
 
