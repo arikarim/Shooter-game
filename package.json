@@ -9,6 +9,10 @@
     "start": "webpack serve --open",
     "heroku-prebuild": "npm install --dev"
   },
+  "engines": {
+    "node": ">=0.10.22",
+    "npm": ">=1.3.14"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arikarim/Shooter-game.git"
