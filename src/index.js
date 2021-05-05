@@ -1,5 +1,5 @@
 
-import './style.css';
+import '../assets/styles/style.css';
 
 import Phaser from './phaser';
 import StartScreen from './scenes/startScreen';

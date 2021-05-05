@@ -1,5 +1,7 @@
 let nameInput;
 
+
+
 const apiInfo = {
   url: 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/',
   headers: {
@@ -53,6 +55,7 @@ export const createNameInput = () => {
   nameInput = document.createElement('input');
   nameInput.placeholder = 'Your name here';
   nameInput.type = 'text';
+  nameInput.classList.add('input')
   document.querySelector('#game').appendChild(nameInput);
 };
 
