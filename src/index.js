@@ -1,7 +1,11 @@
-import Phaser from './phaser';
+
 import './style.css';
 
-
+import Phaser from './phaser';
+import StartScreen from './scenes/startScreen';
+import MainScene from './scenes/mainScene';
+import GameOver from './scenes/gameOver';
+import Score from './scenes/score';
 
 const config = {
   type: Phaser.WEBGL,
