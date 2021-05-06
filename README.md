@@ -65,11 +65,6 @@ This are the enemy ships trying to destroy you with lasers
 
 <br>
 <br>
-This is the first page:
-![image](./assets/images/screen1.png)
-
-This is the leader board page:
-![image](./assets/images/screen2.png)
 
 
 <!-- GETTING STARTED -->
