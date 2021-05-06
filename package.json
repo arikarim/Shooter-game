@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "start": "npm run build && webpack serve --host=0.0.0.0 --port=$PORT --disable-host-check",
     "heroku-prebuild": "npm install --dev"
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/arikarim/Shooter-game#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.2.4",
     "eslint": "^7.25.0",
@@ -41,7 +42,10 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "babel": "^6.23.0"
+    "@babel/polyfill": "^7.12.1",
+    "babel": "^6.23.0",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3"
   },
   "heroku-run-build-script": true
 }
