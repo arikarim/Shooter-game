@@ -13,6 +13,23 @@ Heroku [Live Demo Link](https://shooterr-game.herokuapp.com/)
 
 ![image](./assets/images/screen2.png)
 
+## How to play
+
+Follow these instructions:
+- In the main page click on (Play) button.
+
+- Use Arrow keys to move (Left, Right, Up and Down)
+
+- Use Space bar button to shoot lasers.
+
+- you have 3 lives so fight carefully.
+
+- Destroy and collect as many scores as possible.
+
+- When the game is over put your name and submit it.
+
+- if you want you can play again.
+
 
 
 ### Built With
