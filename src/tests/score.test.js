@@ -56,7 +56,7 @@ describe('Getting Scores from API', () => {
   test('should math the score that been given', async () => {
     fetch.mockResponseOnce(JSON.stringify([{ user: 'Ari', score: 100 }]));
     const scoreBoard = await ScoreLogic.getGameScores('Ari', 100);
-    const data = scoreBoard
+    const data = scoreBoard;
     expect(data[0].score).toBeGreaterThan(5);
   });
 
