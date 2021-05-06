@@ -26,14 +26,14 @@ Heroku [Live Demo Link](https://shooterr-game.herokuapp.com/)
 
 <hr>
 
-## Game Caracters
+## Game Design
 
-<img src="./assets/images/sprPlayer.png" alt="Logo" width="30" height="30"> <br>
+<img src="./assets/images/pl.png" alt="Logo" width="30" height="30"> <br>
 This is the plater ship, and he has 3 lives to kill as many enemy ships as possible.
 <br>
 <br>
 
-<img src="./assets/images/enee.png" alt="Logo" width="30" height="30"> <br>
+<img src="./assets/images/ship5.png" alt="Logo" width="30" height="30"> <br>
 This are the enemy ships trying to destroy you with lasers
 
 <br>
@@ -44,8 +44,15 @@ This are the enemy ships trying to destroy you with lasers
 <br>
 <br>
 
-<!-- <img src="./assets/images/sprLaserEnemy.png" alt="Logo" width="5" height="30"> &nbsp;&nbsp; Enemy laser used to destroy main character's ship. -->
+<img src="./assets/images/sprLaserEnemy.png" alt="Logo" width="5" height="30"> &nbsp;&nbsp; Enemy laser used to destroy main character's ship.
 
+<br>
+<br>
+This is the first page:
+![image](./assets/images/screen1.png)
+
+This is the leader board page:
+![image](./assets/images/screen2.png)
 
 
 <!-- GETTING STARTED -->

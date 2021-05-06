@@ -62,13 +62,6 @@ export default class MainScene extends Phaser.Scene {
       laserEnemy: this.sound.add('sndLaserEnemy'),
     };
 
-    // this.anims.create({
-    //   key: 'sprEnemy0',
-    //   frames: this.anims.generateFrameNumbers('sprEnemy0'),
-    //   frameRate: 10,
-    //   repeat: -1,
-    // });
-
     this.anims.create({
       key: 'sprExplosion',
       frames: this.anims.generateFrameNumbers('sprExplosion'),
@@ -96,8 +89,6 @@ export default class MainScene extends Phaser.Scene {
     );
     this.player.body.collideWorldBounds = true;
 
-    // this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-    // this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
     this.playerShootDelay = 22;
