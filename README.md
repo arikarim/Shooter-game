@@ -3,7 +3,9 @@
 Shooter game built with Phaser and javascript, a player fights until death for his/her galaxy with 3 lives and limitted hidden shield.
 
 
-[Live Demo Link](https://arikarim.github.io/Shooter-game/)
+GitHub [Live Demo Link](https://arikarim.github.io/Shooter-game/)
+
+Heroku [Live Demo Link](https://shooterr-game.herokuapp.com/)
 
 ## Screenshots of the app.
 
