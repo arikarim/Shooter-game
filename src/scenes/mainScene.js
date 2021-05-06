@@ -13,7 +13,6 @@ import { Enemy, EnemyLaser } from '../content/enemy';
 import { ShieldTile, Explosion } from '../content/entity';
 import Background from '../../assets/images/backk.jpg';
 
-
 export default class MainScene extends Phaser.Scene {
   constructor() {
     super({ key: 'MainScene' });
@@ -26,7 +25,7 @@ export default class MainScene extends Phaser.Scene {
   preload() {
     this.load.image('bgStart', Background);
     this.load.image('sprPlayer', player);
-    
+
     this.load.spritesheet('sprEnemy0', enemies, {
       frameWidth: 8,
       frameHeight: 8,
@@ -52,18 +51,16 @@ export default class MainScene extends Phaser.Scene {
         lives: 2,
         score: 0,
       };
-      
     }
     this.add.image(400, 300, 'bgStart');
-    
- // Resize the image
+
+    // Resize the image
 
     this.sfx = {
       explode: this.sound.add('sndExplode'),
       laserPlayer: this.sound.add('sndLaserPlayer'),
       laserEnemy: this.sound.add('sndLaserEnemy'),
     };
-
 
     // this.anims.create({
     //   key: 'sprEnemy0',
@@ -79,7 +76,6 @@ export default class MainScene extends Phaser.Scene {
       repeat: 0,
     });
 
-
     this.textScore = this.add.text(
       12,
       10,
@@ -92,7 +88,7 @@ export default class MainScene extends Phaser.Scene {
     );
 
     this.player = new Player(
-      
+
       this,
       this.game.config.width * 0.5,
       this.game.config.height - 54,
@@ -110,10 +106,9 @@ export default class MainScene extends Phaser.Scene {
     this.shieldPattern = [
       [0, 0, 0, 1, 1, 0, 0, 0],
       [0, 0, 1, 1, 1, 1, 0, 0],
-      [0, 1, 1, 1, 1, 1, 1, 0]
-  
+      [0, 1, 1, 1, 1, 1, 1, 0],
+
     ];
-    
 
     this.enemies = this.add.group();
     this.enemyLasers = this.add.group();
@@ -216,9 +211,7 @@ export default class MainScene extends Phaser.Scene {
         this.game.config.height - 128,
       );
     }
-    
   }
-
 
   addScore(amount) {
     this.passingData.score += amount;
@@ -465,7 +458,6 @@ export default class MainScene extends Phaser.Scene {
       this.passingData.lives = 3;
     }
 
-    
     this.time.addEvent({
       delay: 3000,
       callback() {
@@ -480,7 +472,5 @@ export default class MainScene extends Phaser.Scene {
       callbackScope: this,
       loop: false,
     });
-    
   }
-  
 }

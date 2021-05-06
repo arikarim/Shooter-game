@@ -1,4 +1,3 @@
-
 import '../assets/styles/style.css';
 
 import Phaser from './phaser';

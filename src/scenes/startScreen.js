@@ -27,7 +27,7 @@ export default class StartScreen extends Phaser.Scene {
     this.textTitle = this.add.text(
       this.game.config.width * 0.5,
       64,
-      "Galaxy War",
+      'Galaxy War',
       {
         fontFamily: 'monospace',
         fontSize: 32,
@@ -52,7 +52,6 @@ export default class StartScreen extends Phaser.Scene {
       this.scene.start('MainScene');
     }, this);
 
-
     this.leaderBoard = this.add.sprite(
       this.game.config.width * 0.7,
       this.game.config.height * 0.6,
@@ -63,7 +62,6 @@ export default class StartScreen extends Phaser.Scene {
     this.leaderBoard.on('pointerover', () => {
       this.sfx.btn.play();
     }, this);
-
 
     this.leaderBoard.on('pointerdown', () => {
       this.sfx.btn.play();
