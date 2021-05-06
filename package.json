@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "start": "webpack serve --open",
+    "build": "webpack",
+    "start": "npm run build && webpack-dev-server --host=0.0.0.0 --port=$PORT --disable-host-check",
     "heroku-prebuild": "npm install --dev"
   },
   "engines": {
@@ -34,5 +34,6 @@
   },
   "dependencies": {
     "babel": "^6.23.0"
-  }
+  },
+  "heroku-run-build-script": true
 }
