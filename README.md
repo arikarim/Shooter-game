@@ -16,6 +16,7 @@ Heroku [Live Demo Link](https://shooterr-game.herokuapp.com/)
 ## How to play
 
 Follow these instructions:
+
 - In the main page click on (Play) button.
 
 - Use Arrow keys to move (Left, Right, Up and Down)
