@@ -8,13 +8,24 @@ const apiInfo = {
   gameID: 'Zl4d7IVkemOTTVg2fUdz',
 };
 
+function ero() {
+  // eslint-disable-next-line no-alert
+  const alertt = document.createElement('p');
+  alertt.textContent = 'Please insert your name';
+  alertt.classList.add('inputt');
+  document.querySelector('#game').appendChild(alertt);
+}
+
 const getPlayerName = () => {
   const playerName = nameInput.value;
   if (playerName) {
     return playerName;
   }
-  // eslint-disable-next-line no-alert
-  alert('Name required');
+  ero();
+  setTimeout(() => {
+    const er = document.querySelector('.inputt');
+    er.remove();
+  }, 2000);
   return false;
 };
 
@@ -37,10 +48,14 @@ export const postScore = async (playerName, score) => {
 
 export const handleScore = async (scene, gameScore) => {
   const playerName = getPlayerName();
-  const result = await postScore(playerName, gameScore);
-  if (result) {
-    scene.scene.start('Score');
-    deleteNameInput();
+  if (playerName) {
+    const result = await postScore(playerName, gameScore);
+    if (result) {
+      scene.scene.start('Score');
+      deleteNameInput();
+    }
+  } else {
+    handleScore();
   }
 };
 

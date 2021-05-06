@@ -17,3 +17,15 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+
+.inputt {
+  background-color: black;
+  color: #bdb4b3;
+  position: absolute;
+  width: 250px;
+  top: 270px;
+  right: 40%;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+}
