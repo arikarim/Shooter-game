@@ -15,7 +15,7 @@ Heroku [Live Demo Link](https://shooterr-game.herokuapp.com/)
 
 ## How to play
 
-Follow these instructions:
+Follow these instructions:-
 
 - In the main page click on (Play) button.
 
