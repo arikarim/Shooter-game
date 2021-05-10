@@ -67,7 +67,6 @@ This are the enemy ships trying to destroy you with lasers
 <br>
 <br>
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
